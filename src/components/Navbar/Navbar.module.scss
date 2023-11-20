@@ -1,0 +1,29 @@
+/* Reset default styles for all HTML elements */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/* Styling for the main container */
+.container {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-evenly; /* Distribute space evenly between items */
+  height: 50px; /* Set the height of the container */
+  background: linear-gradient(to right, rgba(37, 37, 0, 0.668), rgb(38, 0, 0)); /* Apply a gradient background */
+  font-size: 30px; /* Set the font size for text in the container */
+
+  /* Styling for child components within the container */
+  .liComponent {
+    padding: 20px; /* Add padding around the child components */
+    color: rgb(204, 204, 204); /* Set text color */
+    font-size: 20px; /* Set font size for child components */
+  }
+}
+
+/* Styling for login button with class 'LogBtn' */
+.LogBtn {
+  color: black; /* Set text color for the login button */
+}

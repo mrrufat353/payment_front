@@ -1,0 +1,93 @@
+/* Styles for the AddBank component */
+
+/* Container for the credit card display and form */
+.creditCardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+}
+
+/* Styles for the credit card display */
+.creditCard {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(45deg, #333, #555);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styles for the card chip graphic on the credit card */
+.cardChip {
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    background: repeating-conic-gradient(from 0deg to 360deg,
+            #bbb 0deg 10deg,
+            #fff 10deg 20deg);
+    border-radius: 5px;
+    top: 20px;
+    left: 20px;
+}
+
+/* Styles for the card number on the credit card */
+.cardNumber {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Styles for the card details section (holder, expiry) on the credit card */
+.cardDetails {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Styles for card holder and card expiry on the credit card */
+.cardHolder,
+.cardExpiry {
+    text-align: left;
+}
+
+/* Styles for the card expiry and CCV section on the credit card */
+.cardExpCcv {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Styles for the credit card form */
+.creditCardForm {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Styles for labels in the credit card form */
+.label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Styles for input fields in the credit card form */
+.input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Styles for focused input fields in the credit card form */
+.creditCardForm .input:focus {
+    border-color: #4caf50; /* Green border color on focus */
+}

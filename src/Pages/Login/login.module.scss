@@ -1,0 +1,221 @@
+// Importing the 'Rajdhani' font from Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:500,700&display=swap');
+
+// Variables
+$font: 'Rajdhani';
+$colorPurple: #615dfa;
+$colorDark: #3e3f5e;
+
+// Global styling
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+// Container styling
+.container {
+    align-items: center;
+    background: #efefef;
+    display: flex;
+    font-family: $font, sans-serif;
+    height: 100vh;
+    justify-content: center;
+}
+
+// Contact wrapper styling
+.contactWrapper {
+    background: #fff;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, .15);
+    border-radius: .75em;
+    padding: 2em;
+    width: 25em;
+}
+
+// Login call-to-action styling
+.loginCta {
+    &>h2 {
+        color: $colorDark;
+        font-size: 1.75rem;
+        text-align: center;
+    }
+}
+
+// Socials wrapper styling
+.socialsWrapper {
+    &>header {
+        &>h2 {
+            // Styling for the header
+            background: #fff;
+            color: $colorDark;
+            font-size: 1rem;
+            position: relative;
+            text-align: center;
+            z-index: 10;
+
+            // Styling for the before and after pseudo-elements
+            &:after,
+            &:before {
+                background: lighten($colorDark, 55);
+                content: '';
+                display: block;
+                height: .10em;
+                position: absolute;
+                top: 50%;
+                transform: translatey(-50%);
+                width: 17.5%;
+            }
+
+            &:after {
+                right: 0;
+            }
+
+            &:before {
+                left: 0;
+            }
+        }
+    }
+
+    &>ul {
+        // Styling for the unordered list
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        padding: 0;
+
+        &>p {
+            // Styling for the paragraph inside the unordered list
+            margin: .9em;
+            cursor: pointer;
+            text-decoration: underline;
+            color: rgb(33, 33, 169);
+        }
+    }
+}
+
+// Form styling
+form {
+    // Styling for the form
+    margin: 2em 0;
+
+    // Form row styling
+    .formRow {
+        // Styling for each form row
+        display: flex;
+        margin: .75em 0;
+        position: relative;
+
+        // Placeholder styles
+        &:not(:placeholder-shown) {
+            &+span {
+                top: 0;
+                font-size: .90rem;
+
+                // Styling for the after pseudo-element
+                &:after {
+                    top: -50%;
+                    font-size: .75rem;
+                }
+            }
+        }
+
+        // Styling for the span element
+        span {
+            background: #fff;
+            color: #adafca;
+            display: inline-block;
+            font-weight: 400;
+            left: 1em;
+            padding: 0 .5em;
+            position: absolute;
+            pointer-events: none;
+            transform: translatey(-50%);
+            top: 50%;
+            transition: all 300ms ease;
+            user-select: none;
+        }
+
+        // Styling for the input and button elements
+        input,
+        button {
+            border-radius: .5em;
+            font-family: inherit;
+            padding: 1em .5em;
+            width: 100%;
+        }
+
+        // Styling for the input element
+        input {
+            font-weight: bold;
+            transition: 100ms ease all;
+            width: 100%;
+
+            // Styling for specific input types
+            &[type=text],
+            &[type=password] {
+                border: .075em solid #ddd;
+            }
+
+            // Valid styling
+            &:valid {
+                &+span {
+                    top: 0;
+                    font-size: .90rem;
+                }
+            }
+
+            // Invalid styling
+            &:invalid {
+                &+span {
+                    top: 50%;
+                }
+            }
+
+            // Focus styling
+            &:focus {
+                &+span {
+                    top: 0;
+                }
+            }
+
+            // Required styling
+            &:required {
+                box-shadow: none;
+            }
+
+            // Focus styling with invalid state
+            &:focus {
+                border-color: #7b5dfa;
+                outline: none;
+
+                // Invalid state styling
+                &:invalid {
+                    box-shadow: none;
+                    top: 50%;
+                }
+
+                // Valid state styling
+                &:valid {
+                    top: 0;
+                }
+            }
+        }
+
+        // Styling for the button element
+        &>button {
+            // ... other styles ...
+
+            // Focus and hover styling
+            &:focus{
+                border: .10em solid darken(#7b5dfa, 10);
+                outline: none;
+            }
+            &:hover {
+                background-color: darken(#7b5dfa, 5);
+            }
+        }
+    }
+}
+
+// Comment for the entire SCSS file
+// Add any additional comments here as needed
